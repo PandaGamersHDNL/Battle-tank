@@ -1,0 +1,10 @@
+{
+	"files.exclude": {
+		"C:/Users/panda/Documents/Battle-tank/BattleTank/.vs": true,
+		"C:/Users/panda/Documents/Battle-tank/BattleTank/.vscode": true,
+		"C:/Users/panda/Documents/Battle-tank/BattleTank/Content": true,
+		"C:/Users/panda/Documents/Battle-tank/BattleTank/DerivedDataCache": true,
+		"C:/Users/panda/Documents/Battle-tank/BattleTank/Intermediate": true,
+		"C:/Users/panda/Documents/Battle-tank/BattleTank/Saved": true
+	}
+}
