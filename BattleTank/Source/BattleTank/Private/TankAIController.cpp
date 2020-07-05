@@ -6,12 +6,18 @@
 void ATankAIController::BeginPlay()
 {
     Super::BeginPlay();
+    
+}
 
-    auto ControlledTank = GetControlledTank();
-    auto PlayerTank = GetPlayerTank();
+void ATankAIController::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
 
-    UE_LOG(LogTemp, Warning, TEXT("AI controls: %s and sees %s as player tank"), *(ControlledTank->GetName()), *(PlayerTank->GetName()));
-     
+    if(GetControlledTank())
+    {
+
+    GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+    }
 }
 
 ATank* ATankAIController::GetControlledTank() const

@@ -7,7 +7,7 @@ void ATankPlayerController::BeginPlay()
 {
     Super::BeginPlay();
 
-    UE_LOG(LogTemp, Warning, TEXT("The tank %s is controlled by the PlayerController"), *(GetControlledTank()->GetName()));
+    //UE_LOG(LogTemp, Warning, TEXT("The tank %s is controlled by the PlayerController"), *(GetControlledTank()->GetName()));
 }
 
 void ATankPlayerController::Tick(float DeltaTime)
@@ -29,7 +29,7 @@ void ATankPlayerController::AimTowardsCrosshair()
     FVector HitLocation; //out parameter
     if (GetSightRayHitLocation(HitLocation))
     {
-        UE_LOG(LogTemp, Warning, TEXT("Location: %s"), *HitLocation.ToString());
+       GetControlledTank()->AimAt(HitLocation);
     }
 
 
