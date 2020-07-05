@@ -21,10 +21,20 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 	
+	UPROPERTY(EditAnywhere)
+	float CrossHairXLocation = .5f;
+
+	UPROPERTY(EditAnywhere)
+	float CrossHairYLocation = 0.3333333f;
+
+	UPROPERTY(EditAnywhere)
+	float LineTraceRange = 1000000.f;
+	
 public:
 	void BeginPlay() override;
 
 	void Tick(float DeltatTime) override;
+
 
 
 };

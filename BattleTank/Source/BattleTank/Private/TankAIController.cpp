@@ -10,7 +10,7 @@ void ATankAIController::BeginPlay()
     auto ControlledTank = GetControlledTank();
     auto PlayerTank = GetPlayerTank();
 
-    UE_LOG(LogTemp, Warning, TEXT("AI controlls: %s and sees %s as player tank"), *(ControlledTank->GetName()), *(PlayerTank->GetName()));
+    UE_LOG(LogTemp, Warning, TEXT("AI controls: %s and sees %s as player tank"), *(ControlledTank->GetName()), *(PlayerTank->GetName()));
      
 }
 
